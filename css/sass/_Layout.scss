@@ -1,0 +1,46 @@
+// Nav Start
+// @import "./style.scss";
+@import "mixin";
+header {
+  //   position: fixed;
+  position: relative;
+}
+.navBorder {
+  //   background-color: rgb(255, 255, 255, 0.4);
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+
+  @include centerContent;
+  gap: 20px;
+  width: 100vw;
+  height: 150px;
+  position: fixed;
+
+  .schoolLogo {
+    img {
+      width: 500px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 1.2rem;
+  }
+}
+// Nav End
+
+// Banner Start
+#topBanner {
+  //   height: 50vw;
+  #contentBanner {
+    background-image: url(/img/Spurgeon-Banner.png);
+    background-repeat: no-repeat;
+    height: 50vw;
+    @include centerContent;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+}

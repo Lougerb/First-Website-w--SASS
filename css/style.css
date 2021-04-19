@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+header {
+  position: relative;
+}
+
+.navBorder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100vw;
+  height: 150px;
+  position: fixed;
+}
+.navBorder .schoolLogo img {
+  width: 500px;
+}
+.navBorder ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+
+#topBanner #contentBanner {
+  background-image: url(/img/Spurgeon-Banner.png);
+  background-repeat: no-repeat;
+  height: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
