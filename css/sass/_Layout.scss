@@ -6,7 +6,7 @@ header {
   position: relative;
 }
 .navBorder {
-  //   background-color: rgb(255, 255, 255, 0.4);
+  background-color: rgb(255, 255, 255, 0.4);
   //   display: flex;
   //   align-items: center;
   //   justify-content: center;
@@ -27,6 +27,11 @@ header {
     flex-direction: row;
     gap: 20px;
     font-size: 1.2rem;
+
+    a {
+      color: #025b07;
+      text-shadow: 3px 3px 4px rgb(0, 0, 0, 0.6);
+    }
   }
 }
 // Nav End
@@ -39,8 +44,35 @@ header {
     background-repeat: no-repeat;
     height: 50vw;
     @include centerContent;
+    padding: 30px;
+    gap: 60px;
     // display: flex;
     // justify-content: center;
     // align-items: center;
+    .bannerQuote-xl {
+      width: 500px;
+    }
   }
+}
+.bannerQuote {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  &-xl {
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.bigButton {
+  background-color: rgb(150, 255, 0, 0.5);
+  border-radius: 15px;
+  // width: 200px;
+  // height: 80px;
+  padding: 25px 15px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  @include centerContent;
 }

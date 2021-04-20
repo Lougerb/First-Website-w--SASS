@@ -23,6 +23,7 @@ header {
 }
 
 .navBorder {
+  background-color: rgba(255, 255, 255, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,11 +41,43 @@ header {
   gap: 20px;
   font-size: 1.2rem;
 }
+.navBorder ul a {
+  color: #025b07;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
+}
 
 #topBanner #contentBanner {
   background-image: url(/img/Spurgeon-Banner.png);
   background-repeat: no-repeat;
   height: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 60px;
+}
+#topBanner #contentBanner .bannerQuote-xl {
+  width: 500px;
+}
+
+.bannerQuote {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.bannerQuote-xl {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+
+.bigButton {
+  background-color: rgba(150, 255, 0, 0.5);
+  border-radius: 15px;
+  padding: 25px 15px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
