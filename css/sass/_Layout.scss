@@ -1,78 +1,202 @@
 // Nav Start
 // @import "./style.scss";
 @import "mixin";
-header {
-  //   position: fixed;
-  position: relative;
-}
-.navBorder {
-  background-color: rgb(255, 255, 255, 0.4);
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
+// header {
+//   // display: block;
+//   //   position: fixed;
+//   position: absolute;
+//   width: 100vw;
+//   height: 150px;
+//   background-color: red;
+// }
+// .navBorder {
+//   background-color: rgb(255, 255, 255, 0.4);
+//   //   display: flex;
+//   //   align-items: center;
+//   //   justify-content: center;
 
-  @include centerContent;
-  gap: 20px;
-  width: 100vw;
-  height: 150px;
-  position: fixed;
+//   @include centerContent;
+//   gap: 20px;
+//   width: 100vw;
+//   height: 150px;
+//   position: fixed;
 
-  .schoolLogo {
-    img {
-      width: 500px;
-    }
-  }
-  ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: 1.2rem;
+//   .schoolLogo {
+//     img {
+//       width: 500px;
+//     }
+//   }
+//   ul {
+//     display: flex;
+//     flex-direction: row;
+//     gap: 20px;
+//     font-size: 1.2rem;
 
-    a {
-      color: #025b07;
-      text-shadow: 3px 3px 4px rgb(0, 0, 0, 0.6);
-    }
-  }
-}
-// Nav End
+//     a {
+//       color: #025b07;
+//       text-shadow: 3px 3px 4px rgb(0, 0, 0, 0.6);
+//     }
+//   }
+// }
+// // Nav End
 
-// Banner Start
-#topBanner {
-  //   height: 50vw;
-  #contentBanner {
+// // Banner Start
+// #topBanner {
+//   //   height: 50vw;
+//   #contentBanner {
+//     // position: relative;
+//     background-image: url(/img/Spurgeon-Banner.png);
+//     background-repeat: no-repeat;
+//     height: 50vw;
+//     @include centerContent;
+//     padding: 30px;
+//     gap: 60px;
+//     // display: flex;
+//     // justify-content: center;
+//     // align-items: center;
+//     .bannerQuote-xl {
+//       width: 500px;
+//     }
+//   }
+// }
+// .bannerQuote {
+//   color: white;
+//   font-weight: bold;
+//   font-size: 3rem;
+//   &-xl {
+//     font-size: 4rem;
+//     color: white;
+//     font-weight: bold;
+//   }
+// }
+
+// .bigButton {
+//   background-color: rgb(150, 255, 0, 0.5);
+//   border-radius: 15px;
+//   // width: 300px;
+//   // height: 100px;
+//   padding: 25px 15px;
+//   font-size: 2.5rem;
+//   font-weight: bold;
+//   color: white;
+//   @include centerContent;
+// }
+
+// .headerSec {
+//   display: block;
+//   height: 100wh;
+// }
+// .explore {
+//   display: block;
+// }
+.banner {
+  &-1 {
     background-image: url(/img/Spurgeon-Banner.png);
     background-repeat: no-repeat;
-    height: 50vw;
-    @include centerContent;
-    padding: 30px;
-    gap: 60px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    .bannerQuote-xl {
-      width: 500px;
+    background-size: 100vw auto;
+    // width: 100vw;
+    height: 100vh;
+    // min-width: 360px;
+    // position: absolute;
+  }
+  &-2 {
+    background-image: url(/img/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    // background-color: red;
+
+    // width: 100%;
+    height: 100vh;
+  }
+  &Quote {
+    color: white;
+    font-weight: bold;
+    // font-size: 6vh;
+    font-size: 3rem;
+    &-xl {
+      // font-size: 8vh;
+      font-size: 4rem;
+      color: white;
+      font-weight: bold;
+    }
+    &-Wrapper {
+      @include centerContent;
     }
   }
 }
-.bannerQuote {
-  color: white;
-  font-weight: bold;
-  font-size: 3rem;
-  &-xl {
-    font-size: 4rem;
-    color: white;
-    font-weight: bold;
+.innerHeader {
+  position: absolute;
+  // height: 100vh;
+}
+header {
+  // width: 100vw;
+  height: 15vh;
+  .navBorder {
+    background-color: rgb(255, 255, 255, 0.4);
+
+    @include centerContent;
+    gap: 20px;
+    width: 100vw;
+    height: 15vh;
+    position: fixed;
+
+    .schoolLogo {
+      img {
+        width: 500px;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      font-size: 1.2rem;
+
+      a {
+        color: #025b07;
+        text-shadow: 3px 3px 4px rgb(0, 0, 0, 0.6);
+      }
+    }
   }
 }
+// .enrollNow {
+//   // max-width: 1000px;
+//   // overflow-x: hidden;
+//   width: 100vw;
+//   height: 80vh;
+//   @include centerContent;
+//   gap: 40px;
+
+//   .bannerQuote-xl {
+//     width: 500px;
+//   }
+//   .banner-1 {
+//     position: absolute;
+//   }
+// }
 
 .bigButton {
   background-color: rgb(150, 255, 0, 0.5);
   border-radius: 15px;
-  // width: 200px;
-  // height: 80px;
-  padding: 25px 15px;
+  width: 250px;
+  height: 100px;
+  // padding: 25px 15px;
+  // padding: 2.5rem 1.5rem;
   font-size: 2.5rem;
   font-weight: bold;
   color: white;
   @include centerContent;
+}
+
+.banner-1 {
+  @include centerContent;
+  .enrollNow {
+    // width: 90vw;
+    // max-width: 1000px;
+    // min-width: 360px;
+    gap: 40px;
+    @include centerContent;
+    .bannerQuote-xl {
+      width: 500px;
+    }
+  }
 }

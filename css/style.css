@@ -18,48 +18,18 @@ body {
   font-family: "Roboto";
 }
 
-header {
-  position: relative;
-}
-
-.navBorder {
-  background-color: rgba(255, 255, 255, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 100vw;
-  height: 150px;
-  position: fixed;
-}
-.navBorder .schoolLogo img {
-  width: 500px;
-}
-.navBorder ul {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  font-size: 1.2rem;
-}
-.navBorder ul a {
-  color: #025b07;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
-}
-
-#topBanner #contentBanner {
+.banner-1 {
   background-image: url(/img/Spurgeon-Banner.png);
   background-repeat: no-repeat;
-  height: 50vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  gap: 60px;
+  background-size: 100vw auto;
+  height: 100vh;
 }
-#topBanner #contentBanner .bannerQuote-xl {
-  width: 500px;
+.banner-2 {
+  background-image: url(/img/banner2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  height: 100vh;
 }
-
 .bannerQuote {
   color: white;
   font-weight: bold;
@@ -70,15 +40,67 @@ header {
   color: white;
   font-weight: bold;
 }
+.bannerQuote-Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerHeader {
+  position: absolute;
+}
+
+header {
+  height: 15vh;
+}
+header .navBorder {
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100vw;
+  height: 15vh;
+  position: fixed;
+}
+header .navBorder .schoolLogo img {
+  width: 500px;
+}
+header .navBorder ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+header .navBorder ul a {
+  color: #025b07;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
+}
 
 .bigButton {
   background-color: rgba(150, 255, 0, 0.5);
   border-radius: 15px;
-  padding: 25px 15px;
+  width: 250px;
+  height: 100px;
   font-size: 2.5rem;
   font-weight: bold;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.banner-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-1 .enrollNow {
+  gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-1 .enrollNow .bannerQuote-xl {
+  width: 500px;
 }
