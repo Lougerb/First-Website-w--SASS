@@ -1,94 +1,7 @@
-// Nav Start
-// @import "./style.scss";
 @import "mixin";
-// header {
-//   // display: block;
-//   //   position: fixed;
-//   position: absolute;
-//   width: 100vw;
-//   height: 150px;
-//   background-color: red;
-// }
-// .navBorder {
-//   background-color: rgb(255, 255, 255, 0.4);
-//   //   display: flex;
-//   //   align-items: center;
-//   //   justify-content: center;
+$primaryC: rgb(2, 91, 7);
+$secondaryC: #f8ffee;
 
-//   @include centerContent;
-//   gap: 20px;
-//   width: 100vw;
-//   height: 150px;
-//   position: fixed;
-
-//   .schoolLogo {
-//     img {
-//       width: 500px;
-//     }
-//   }
-//   ul {
-//     display: flex;
-//     flex-direction: row;
-//     gap: 20px;
-//     font-size: 1.2rem;
-
-//     a {
-//       color: #025b07;
-//       text-shadow: 3px 3px 4px rgb(0, 0, 0, 0.6);
-//     }
-//   }
-// }
-// // Nav End
-
-// // Banner Start
-// #topBanner {
-//   //   height: 50vw;
-//   #contentBanner {
-//     // position: relative;
-//     background-image: url(/img/Spurgeon-Banner.png);
-//     background-repeat: no-repeat;
-//     height: 50vw;
-//     @include centerContent;
-//     padding: 30px;
-//     gap: 60px;
-//     // display: flex;
-//     // justify-content: center;
-//     // align-items: center;
-//     .bannerQuote-xl {
-//       width: 500px;
-//     }
-//   }
-// }
-// .bannerQuote {
-//   color: white;
-//   font-weight: bold;
-//   font-size: 3rem;
-//   &-xl {
-//     font-size: 4rem;
-//     color: white;
-//     font-weight: bold;
-//   }
-// }
-
-// .bigButton {
-//   background-color: rgb(150, 255, 0, 0.5);
-//   border-radius: 15px;
-//   // width: 300px;
-//   // height: 100px;
-//   padding: 25px 15px;
-//   font-size: 2.5rem;
-//   font-weight: bold;
-//   color: white;
-//   @include centerContent;
-// }
-
-// .headerSec {
-//   display: block;
-//   height: 100wh;
-// }
-// .explore {
-//   display: block;
-// }
 .banner {
   &-1 {
     background-image: url(/img/Spurgeon-Banner.png);
@@ -106,7 +19,7 @@
     // background-color: red;
 
     // width: 100%;
-    height: 100vh;
+    height: 60vh;
   }
   &Quote {
     color: white;
@@ -114,22 +27,41 @@
     // font-size: 6vh;
     font-size: 3rem;
     &-xl {
-      // font-size: 8vh;
-      font-size: 4rem;
+      font-size: 4.5vw;
+      // font-size: 4em;
+
       color: white;
       font-weight: bold;
     }
+    &-sm {
+      font-size: 2.5vw;
+      color: white;
+      font-weight: bold;
+      // width: 50%;
+      padding-left: 50%;
+      display: flex;
+      align-content: end;
+    }
     &-Wrapper {
-      @include centerContent;
+      &-1 {
+        display: flex;
+        // align-content: end;
+        justify-content: center;
+        text-align: right;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding-right: 20px;
+      }
     }
   }
 }
+
 .innerHeader {
   position: absolute;
   // height: 100vh;
 }
 header {
-  // width: 100vw;
   height: 15vh;
   .navBorder {
     background-color: rgb(255, 255, 255, 0.4);
@@ -158,21 +90,6 @@ header {
     }
   }
 }
-// .enrollNow {
-//   // max-width: 1000px;
-//   // overflow-x: hidden;
-//   width: 100vw;
-//   height: 80vh;
-//   @include centerContent;
-//   gap: 40px;
-
-//   .bannerQuote-xl {
-//     width: 500px;
-//   }
-//   .banner-1 {
-//     position: absolute;
-//   }
-// }
 
 .bigButton {
   background-color: rgb(150, 255, 0, 0.5);
@@ -182,6 +99,7 @@ header {
   // padding: 25px 15px;
   // padding: 2.5rem 1.5rem;
   font-size: 2.5rem;
+
   font-weight: bold;
   color: white;
   @include centerContent;
@@ -190,13 +108,48 @@ header {
 .banner-1 {
   @include centerContent;
   .enrollNow {
-    // width: 90vw;
     // max-width: 1000px;
     // min-width: 360px;
     gap: 40px;
     @include centerContent;
     .bannerQuote-xl {
+      font-size: auto;
       width: 500px;
     }
+  }
+}
+
+.explore {
+  background-color: $secondaryC;
+  // width: 100vw;
+
+  &-Option {
+    font-style: italic;
+    border: 1px solid $primaryC;
+    width: 180px;
+    height: 60px;
+    font-size: 1.5em;
+    @include centerContent;
+    text-align: center;
+  }
+  &-Nav {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+  }
+  &-grid {
+    grid-template-columns: repeat(3, 200px);
+    @include centerItem;
+    grid-gap: 1em;
+    // width: 600px;
+  }
+}
+.section {
+  &-Explore {
+    font-size: 3rem;
+    font-style: italic;
+    color: $primaryC;
+    text-shadow: 0px 1px 4.5px black;
   }
 }
