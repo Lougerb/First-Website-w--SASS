@@ -1,6 +1,8 @@
 @import "mixin";
 $primaryC: rgb(2, 91, 7);
 $secondaryC: #f8ffee;
+$tertiaryC: #be6101;
+$quoteShadow: 3px 3px 4px rgb(0, 0, 0, 0.6);
 
 .banner {
   &-1 {
@@ -16,10 +18,12 @@ $secondaryC: #f8ffee;
     background-image: url(/img/banner2.jpg);
     background-repeat: no-repeat;
     background-size: 100vw auto;
-    // background-color: red;
-
-    // width: 100%;
     height: 60vh;
+    .bannerQuote-Wrapper-1 {
+      .bannerQuote-sm {
+        padding-left: 60%;
+      }
+    }
   }
   &Quote {
     color: white;
@@ -28,6 +32,7 @@ $secondaryC: #f8ffee;
     font-size: 3rem;
     &-xl {
       font-size: 4.5vw;
+      text-shadow: $quoteShadow;
       // font-size: 4em;
 
       color: white;
@@ -37,10 +42,7 @@ $secondaryC: #f8ffee;
       font-size: 2.5vw;
       color: white;
       font-weight: bold;
-      // width: 50%;
-      padding-left: 50%;
-      display: flex;
-      align-content: end;
+      text-shadow: $quoteShadow;
     }
     &-Wrapper {
       &-1 {
@@ -69,7 +71,7 @@ header {
     @include centerContent;
     gap: 20px;
     width: 100vw;
-    height: 15vh;
+    height: 20vh;
     position: fixed;
 
     .schoolLogo {
@@ -80,12 +82,22 @@ header {
     ul {
       display: flex;
       flex-direction: row;
-      gap: 20px;
+      // gap: 20px;
       font-size: 1.2rem;
+      height: inherit;
 
-      a {
-        color: #025b07;
-        text-shadow: 3px 3px 4px rgb(0, 0, 0, 0.6);
+      li {
+        height: inherit;
+        a {
+          height: inherit;
+          color: #025b07;
+          text-shadow: 3px 3px 4px rgb(0, 0, 0, 0.3);
+          @include centerContent;
+          width: 80px;
+          &:hover {
+            @include linkHover;
+          }
+        }
       }
     }
   }
@@ -124,29 +136,45 @@ header {
   // width: 100vw;
 
   &-Option {
-    font-style: italic;
+    // font-style: italic;
     border: 1px solid $primaryC;
-    width: 180px;
+    width: 100%;
     height: 60px;
     font-size: 1.5em;
     @include centerContent;
     text-align: center;
+    transform: skewX(-20deg);
+    &:hover {
+      @include linkHover;
+    }
+    a {
+      @include centerContent;
+      height: inherit;
+      width: inherit;
+      transform: skewX(20deg);
+      &:hover {
+        color: white;
+      }
+    }
   }
   &-Nav {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // flex-direction: column;
+    .section-Cat {
+      padding: 20px 100px;
+    }
   }
   &-grid {
     grid-template-columns: repeat(3, 200px);
     @include centerItem;
-    grid-gap: 1em;
-    // width: 600px;
+    column-gap: 3em;
+    row-gap: 1.5em;
+
+    &-sec {
+      @include centerContent;
+    }
   }
 }
 .section {
-  &-Explore {
+  &-Cat {
     font-size: 3rem;
     font-style: italic;
     color: $primaryC;

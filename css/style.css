@@ -30,6 +30,9 @@ body {
   background-size: 100vw auto;
   height: 60vh;
 }
+.banner-2 .bannerQuote-Wrapper-1 .bannerQuote-sm {
+  padding-left: 60%;
+}
 .bannerQuote {
   color: white;
   font-weight: bold;
@@ -37,6 +40,7 @@ body {
 }
 .bannerQuote-xl {
   font-size: 4.5vw;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
   color: white;
   font-weight: bold;
 }
@@ -44,9 +48,7 @@ body {
   font-size: 2.5vw;
   color: white;
   font-weight: bold;
-  padding-left: 50%;
-  display: flex;
-  align-content: end;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
 }
 .bannerQuote-Wrapper-1 {
   display: flex;
@@ -72,7 +74,7 @@ header .navBorder {
   align-items: center;
   gap: 20px;
   width: 100vw;
-  height: 15vh;
+  height: 20vh;
   position: fixed;
 }
 header .navBorder .schoolLogo img {
@@ -81,12 +83,25 @@ header .navBorder .schoolLogo img {
 header .navBorder ul {
   display: flex;
   flex-direction: row;
-  gap: 20px;
   font-size: 1.2rem;
+  height: inherit;
 }
-header .navBorder ul a {
+header .navBorder ul li {
+  height: inherit;
+}
+header .navBorder ul li a {
+  height: inherit;
   color: #025b07;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+}
+header .navBorder ul li a:hover {
+  background-color: rgba(190, 97, 1, 0.8);
+  box-shadow: 0px 1px 2px #000;
+  color: white;
 }
 
 .bigButton {
@@ -122,25 +137,50 @@ header .navBorder ul a {
   background-color: #f8ffee;
 }
 .explore-Option {
-  font-style: italic;
   border: 1px solid #025b07;
-  width: 180px;
+  width: 100%;
   height: 60px;
   font-size: 1.5em;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  transform: skewX(-20deg);
+}
+.explore-Option:hover {
+  background-color: rgba(190, 97, 1, 0.8);
+  box-shadow: 0px 1px 2px #000;
+  color: white;
+}
+.explore-Option a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  width: inherit;
+  transform: skewX(20deg);
+}
+.explore-Option a:hover {
+  color: white;
+}
+.explore-Nav .section-Cat {
+  padding: 20px 100px;
 }
 .explore-grid {
   grid-template-columns: repeat(3, 200px);
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-gap: 1em;
+  column-gap: 3em;
+  row-gap: 1.5em;
+}
+.explore-grid-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.section-Explore {
+.section-Cat {
   font-size: 3rem;
   font-style: italic;
   color: #025b07;
