@@ -138,6 +138,9 @@ header .navBorder ul li a:hover {
   width: 500px;
 }
 
+.explore {
+  margin-bottom: 50px;
+}
 .explore-Option {
   border: 1px solid #025b07;
   width: 100%;
@@ -198,7 +201,7 @@ header .navBorder ul li a:hover {
   margin: 0 auto;
 }
 .article-container .news-slider {
-  height: 395px;
+  height: 388px;
 }
 .article-content {
   border: 1px solid black;
@@ -220,8 +223,12 @@ header .navBorder ul li a:hover {
 }
 .article-text {
   width: 50%;
+  padding: 10px;
 }
 
+.news-event {
+  margin-bottom: 50px;
+}
 .news-slider {
   border: 1px solid black;
   overflow: scroll;

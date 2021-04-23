@@ -141,6 +141,7 @@ header {
 .explore {
   // background-color: $secondaryC;
   // width: 100vw;
+  margin-bottom: 50px;
 
   &-Option {
     // font-style: italic;
@@ -198,7 +199,7 @@ header {
     gap: 20px;
     margin: 0 auto;
     .news-slider {
-      height: 395px;
+      height: 388px;
     }
   }
   &-content {
@@ -221,12 +222,15 @@ header {
 
   &-text {
     width: 50%;
+    padding: 10px;
   }
 }
 .news {
+  &-event {
+    margin-bottom: 50px;
+  }
   &-slider {
     border: 1px solid black;
-    // height: inherit;
     overflow: scroll;
   }
   &-headline {
@@ -242,8 +246,8 @@ header {
       // to make ... overflow
       overflow: hidden;
       text-overflow: ellipsis;
-
       white-space: pre-wrap;
+      // font-weight: ; Edit
     }
   }
 }
