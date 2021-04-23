@@ -18,6 +18,10 @@ body {
   font-family: "Roboto";
 }
 
+body {
+  background-color: #f8ffee;
+}
+
 .banner-1 {
   background-image: url(/img/Spurgeon-Banner.png);
   background-repeat: no-repeat;
@@ -69,6 +73,7 @@ header {
 }
 header .navBorder {
   background-color: rgba(255, 255, 255, 0.4);
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +104,7 @@ header .navBorder ul li a {
   width: 80px;
 }
 header .navBorder ul li a:hover {
-  background-color: rgba(190, 97, 1, 0.8);
+  background-color: #be6101;
   box-shadow: 0px 1px 2px #000;
   color: white;
 }
@@ -133,9 +138,6 @@ header .navBorder ul li a:hover {
   width: 500px;
 }
 
-.explore {
-  background-color: #f8ffee;
-}
 .explore-Option {
   border: 1px solid #025b07;
   width: 100%;
@@ -148,9 +150,10 @@ header .navBorder ul li a:hover {
   transform: skewX(-20deg);
 }
 .explore-Option:hover {
-  background-color: rgba(190, 97, 1, 0.8);
+  background-color: #be6101;
   box-shadow: 0px 1px 2px #000;
   color: white;
+  border-style: none;
 }
 .explore-Option a {
   display: flex;
@@ -162,9 +165,6 @@ header .navBorder ul li a:hover {
 }
 .explore-Option a:hover {
   color: white;
-}
-.explore-Nav .section-Cat {
-  padding: 20px 100px;
 }
 .explore-grid {
   grid-template-columns: repeat(3, 200px);
@@ -185,4 +185,60 @@ header .navBorder ul li a:hover {
   font-style: italic;
   color: #025b07;
   text-shadow: 0px 1px 4.5px black;
+  padding: 20px 100px;
+}
+
+.article-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: 980px;
+  gap: 20px;
+  margin: 0 auto;
+}
+.article-container .news-slider {
+  height: 395px;
+}
+.article-content {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+}
+.article-image {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 50%;
+  border: 1px solid black;
+}
+.article-image img {
+  width: 100%;
+}
+.article-text {
+  width: 50%;
+}
+
+.news-slider {
+  border: 1px solid black;
+  overflow: scroll;
+}
+.news-headline {
+  background-color: #d5ff9b;
+  height: 80px;
+  border-bottom: 1px black solid;
+  max-width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+.news-headline h3 {
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
 }

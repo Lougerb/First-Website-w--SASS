@@ -3,6 +3,11 @@ $primaryC: rgb(2, 91, 7);
 $secondaryC: #f8ffee;
 $tertiaryC: #be6101;
 $quoteShadow: 3px 3px 4px rgb(0, 0, 0, 0.6);
+$selectedNewsC: #d5ff9b;
+
+body {
+  background-color: $secondaryC;
+}
 
 .banner {
   &-1 {
@@ -67,6 +72,7 @@ header {
   height: 15vh;
   .navBorder {
     background-color: rgb(255, 255, 255, 0.4);
+    z-index: 100;
 
     @include centerContent;
     gap: 20px;
@@ -95,6 +101,7 @@ header {
           @include centerContent;
           width: 80px;
           &:hover {
+            // background-color: $tertiaryC;
             @include linkHover;
           }
         }
@@ -132,7 +139,7 @@ header {
 }
 
 .explore {
-  background-color: $secondaryC;
+  // background-color: $secondaryC;
   // width: 100vw;
 
   &-Option {
@@ -146,6 +153,7 @@ header {
     transform: skewX(-20deg);
     &:hover {
       @include linkHover;
+      border-style: none;
     }
     a {
       @include centerContent;
@@ -157,11 +165,7 @@ header {
       }
     }
   }
-  &-Nav {
-    .section-Cat {
-      padding: 20px 100px;
-    }
-  }
+
   &-grid {
     grid-template-columns: repeat(3, 200px);
     @include centerItem;
@@ -179,5 +183,67 @@ header {
     font-style: italic;
     color: $primaryC;
     text-shadow: 0px 1px 4.5px black;
+    padding: 20px 100px;
+  }
+}
+
+.article {
+  &-container {
+    @include centerContent; // width: 1400px;
+    // margin: 0px 178px;
+    // border: 1px solid black;
+    flex-direction: row;
+    // height: 490px;
+    max-width: 980px;
+    gap: 20px;
+    margin: 0 auto;
+    .news-slider {
+      height: 395px;
+    }
+  }
+  &-content {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+  }
+  &-image {
+    overflow: hidden;
+    @include centerContent;
+    height: auto;
+    width: 50%;
+    border: 1px solid black;
+    img {
+      // height: auto;
+      width: 100%;
+    }
+  }
+
+  &-text {
+    width: 50%;
+  }
+}
+.news {
+  &-slider {
+    border: 1px solid black;
+    // height: inherit;
+    overflow: scroll;
+  }
+  &-headline {
+    background-color: $selectedNewsC;
+    height: 80px;
+    border-bottom: 1px black solid;
+    max-width: inherit;
+    @include centerContent;
+    padding: 2px;
+
+    h3 {
+      max-width: 170px;
+      // to make ... overflow
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      white-space: pre-wrap;
+    }
   }
 }
