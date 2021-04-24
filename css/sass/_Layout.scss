@@ -203,6 +203,7 @@ header {
     }
   }
   &-content {
+    background-color: white;
     border: 1px solid black;
     display: flex;
     flex-direction: row;
@@ -213,7 +214,7 @@ header {
     @include centerContent;
     height: auto;
     width: 50%;
-    border: 1px solid black;
+    border-right: 1px solid black;
     img {
       // height: auto;
       width: 100%;
@@ -223,6 +224,14 @@ header {
   &-text {
     width: 50%;
     padding: 10px;
+    // @include centerContent;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    justify-content: space-around;
+    p {
+      @include articleTextOverflow;
+    }
   }
 }
 .news {
@@ -238,16 +247,46 @@ header {
     height: 80px;
     border-bottom: 1px black solid;
     max-width: inherit;
-    @include centerContent;
-    padding: 2px;
+    padding: 5px;
+    overflow-x: hidden;
+    &-title {
+      @include centerContent;
+    }
+    .footer-article-date {
+      font-size: 0.8em;
+    }
 
     h3 {
-      max-width: 170px;
-      // to make ... overflow
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: pre-wrap;
-      // font-weight: ; Edit
+      @include h3NewsLink;
     }
+    &-footer {
+      text-align: end;
+      // padding: 5px;
+    }
+  }
+  &-selected {
+    background-color: darken($color: $selectedNewsC, $amount: 50);
+    // filter: brightness(50%);
+    color: white;
+  }
+}
+.readMoreNews {
+  background-color: $selectedNewsC;
+  height: 40px;
+  border-bottom: 1px black solid;
+  max-width: inherit;
+  @include centerContent;
+  h3 {
+    @include h3NewsLink;
+  }
+}
+
+.footer {
+  &-article {
+    // display: flex;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
