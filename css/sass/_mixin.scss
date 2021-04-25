@@ -13,6 +13,10 @@
   box-shadow: 0px 1px 2px #000;
   color: white;
 }
+@mixin textStroke {
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: white;
+}
 
 @mixin h3NewsLink {
   font-weight: lighter;

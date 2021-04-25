@@ -44,7 +44,7 @@ body {
 }
 .bannerQuote-xl {
   font-size: 4.5vw;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
   color: white;
   font-weight: bold;
 }
@@ -52,7 +52,7 @@ body {
   font-size: 2.5vw;
   color: white;
   font-weight: bold;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
 }
 .bannerQuote-Wrapper-1 {
   display: flex;
@@ -189,6 +189,8 @@ header .navBorder ul li a:hover {
   color: #025b07;
   text-shadow: 0px 1px 4.5px black;
   padding: 20px 100px;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: white;
 }
 
 .article-container {
@@ -205,7 +207,7 @@ header .navBorder ul li a:hover {
 }
 .article-content {
   background-color: white;
-  border: 1px solid black;
+  box-shadow: 1px 2px 6px #000;
   display: flex;
   flex-direction: row;
   width: 800px;
@@ -241,8 +243,9 @@ header .navBorder ul li a:hover {
   margin-bottom: 50px;
 }
 .news-slider {
-  border: 1px solid black;
+  box-shadow: 1px 2px 6px #000;
   overflow: scroll;
+  overflow-x: hidden;
 }
 .news-headline {
   background-color: #d5ff9b;
@@ -250,7 +253,6 @@ header .navBorder ul li a:hover {
   border-bottom: 1px black solid;
   max-width: inherit;
   padding: 5px;
-  overflow-x: hidden;
 }
 .news-headline-title {
   display: flex;
@@ -279,7 +281,6 @@ header .navBorder ul li a:hover {
 .readMoreNews {
   background-color: #d5ff9b;
   height: 40px;
-  border-bottom: 1px black solid;
   max-width: inherit;
   display: flex;
   justify-content: center;
@@ -299,4 +300,90 @@ header .navBorder ul li a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.missionVision {
+  background-image: linear-gradient(45deg, #96ff00, #025b07);
+  padding: 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.missionVision-container {
+  display: grid;
+  width: 980px;
+  grid-template-columns: repeat(2, 490px);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  row-gap: 1.5em;
+}
+.missionVision-box {
+  width: 490px;
+  height: auto;
+}
+.missionVision-h2 {
+  color: white;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+.missionVision-p {
+  line-height: 1.5em;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.missionVision-title {
+  text-align: center;
+}
+.missionVision-title h1 {
+  color: white;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 3.5em;
+  font-style: italic;
+}
+
+.visionSec {
+  text-align: end;
+}
+.visionSec img {
+  width: 490px;
+}
+
+#mainfooter {
+  background-color: #025b07;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+#mainfooter-contact {
+  display: flex;
+  flex-direction: column;
+}
+#mainfooter-cr {
+  opacity: 0.5;
+}
+
+.mainfooter-container {
+  width: 490px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.mainfooter-xl {
+  font-size: 1.2em;
+}
+.mainfooter-sm {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.mainfooter-sm a {
+  color: #d5ff9b;
 }
