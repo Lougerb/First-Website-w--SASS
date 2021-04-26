@@ -1,4 +1,4 @@
-@import "mixin";
+// @import "mixin";
 $primaryC: rgb(2, 91, 7);
 $secondaryC: #f8ffee;
 $tertiaryC: #be6101;
@@ -12,22 +12,21 @@ body {
 
 .banner {
   &-1 {
-    background-image: url(/img/Spurgeon-Banner.png);
-    background-repeat: no-repeat;
-    background-size: 100vw auto;
-    // width: 100vw;
+    background-image: url("/img/Spurgeon-Banner.png");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: left;
+    @include bgBanner;
     height: 100vh;
-    // min-width: 360px;
-    // position: absolute;
   }
   &-2 {
     background-image: url(/img/banner2.jpg);
-    background-repeat: no-repeat;
-    background-size: 100vw auto;
-    height: 60vh;
+
+    @include bgBanner;
+    height: 50vh;
     .bannerQuote-Wrapper-1 {
       .bannerQuote-sm {
-        padding-left: 60%;
+        float: right;
       }
     }
   }
@@ -37,15 +36,13 @@ body {
     // font-size: 6vh;
     font-size: 3rem;
     &-xl {
-      font-size: 4.5vw;
       text-shadow: $textShadow;
-      // font-size: 4em;
-
+      font-size: 4em;
       color: white;
       font-weight: bold;
     }
     &-sm {
-      font-size: 2.5vw;
+      font-size: 2em;
       color: white;
       font-weight: bold;
       text-shadow: $textShadow;
@@ -53,13 +50,13 @@ body {
     &-Wrapper {
       &-1 {
         display: flex;
-        // align-content: end;
         justify-content: center;
         text-align: right;
+        float: right;
         flex-direction: column;
         height: 100%;
-        width: 100%;
-        padding-right: 20px;
+        // width: 50vw;
+        // padding-right: 20px;
       }
     }
   }
@@ -71,10 +68,14 @@ body {
 }
 header {
   height: 15vh;
+
+  .logo-mobile {
+    display: none;
+  }
+
   .navBorder {
     background-color: rgb(255, 255, 255, 0.4);
     z-index: 100;
-
     @include centerContent;
     gap: 20px;
     width: 100vw;
@@ -128,8 +129,6 @@ header {
 .banner-1 {
   @include centerContent;
   .enrollNow {
-    // max-width: 1000px;
-    // min-width: 360px;
     gap: 40px;
     @include centerContent;
     .bannerQuote-xl {

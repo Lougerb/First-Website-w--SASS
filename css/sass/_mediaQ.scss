@@ -1,0 +1,49 @@
+// @import "mixin";
+
+@media (max-width: 800px) {
+  @include headerMobile;
+  .banner {
+    &-1 {
+      .enrollNow {
+        flex-direction: column;
+      }
+    }
+    // &Quote {
+    //   &-xl {
+    //     // width: 100%;
+    //     // font-size: 3em;
+    //   }
+    // }
+  }
+  .enrollNow {
+    .bannerQuote-xl {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  @include headerMobile;
+
+  .banner {
+    &-1 {
+      .enrollNow {
+        flex-direction: column;
+      }
+    }
+    &Quote {
+      &-Wrapper {
+        &-1 {
+          width: 100vw;
+        }
+      }
+      &-xl {
+        width: 100%;
+        font-size: 3em;
+      }
+      &-sm {
+        font-size: 2em;
+      }
+    }
+  }
+}

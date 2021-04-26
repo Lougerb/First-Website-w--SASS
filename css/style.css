@@ -23,19 +23,21 @@ body {
 }
 
 .banner-1 {
-  background-image: url(/img/Spurgeon-Banner.png);
+  background-image: url("/img/Spurgeon-Banner.png");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100vw auto;
+  background-position: left;
   height: 100vh;
 }
 .banner-2 {
   background-image: url(/img/banner2.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100vw auto;
-  height: 60vh;
+  background-position: left;
+  height: 50vh;
 }
 .banner-2 .bannerQuote-Wrapper-1 .bannerQuote-sm {
-  padding-left: 60%;
+  float: right;
 }
 .bannerQuote {
   color: white;
@@ -43,13 +45,13 @@ body {
   font-size: 3rem;
 }
 .bannerQuote-xl {
-  font-size: 4.5vw;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 4em;
   color: white;
   font-weight: bold;
 }
 .bannerQuote-sm {
-  font-size: 2.5vw;
+  font-size: 2em;
   color: white;
   font-weight: bold;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
@@ -58,10 +60,9 @@ body {
   display: flex;
   justify-content: center;
   text-align: right;
+  float: right;
   flex-direction: column;
   height: 100%;
-  width: 100%;
-  padding-right: 20px;
 }
 
 .innerHeader {
@@ -70,6 +71,9 @@ body {
 
 header {
   height: 15vh;
+}
+header .logo-mobile {
+  display: none;
 }
 header .navBorder {
   background-color: rgba(255, 255, 255, 0.4);
@@ -386,4 +390,47 @@ header .navBorder ul li a:hover {
 }
 .mainfooter-sm a {
   color: #d5ff9b;
+}
+
+@media (max-width: 800px) {
+  header .logo-mobile {
+    display: block;
+    padding: 40px 40px;
+    width: 100%;
+  }
+  header .navBorder {
+    visibility: hidden;
+  }
+
+  .banner-1 .enrollNow {
+    flex-direction: column;
+  }
+
+  .enrollNow .bannerQuote-xl {
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  header .logo-mobile {
+    display: block;
+    padding: 40px 40px;
+    width: 100%;
+  }
+  header .navBorder {
+    visibility: hidden;
+  }
+
+  .banner-1 .enrollNow {
+    flex-direction: column;
+  }
+  .bannerQuote-Wrapper-1 {
+    width: 100vw;
+  }
+  .bannerQuote-xl {
+    width: 100%;
+    font-size: 3em;
+  }
+  .bannerQuote-sm {
+    font-size: 2em;
+  }
 }

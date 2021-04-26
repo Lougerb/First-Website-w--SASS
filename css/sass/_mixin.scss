@@ -36,3 +36,23 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+// Mobile Queries
+@mixin bgBanner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+@mixin headerMobile {
+  header {
+    .logo-mobile {
+      display: block;
+      padding: 40px 40px;
+      width: 100%;
+    }
+    .navBorder {
+      visibility: hidden;
+    }
+  }
+}
