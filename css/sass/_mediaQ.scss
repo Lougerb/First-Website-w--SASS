@@ -1,5 +1,3 @@
-// @import "mixin";
-
 @media (max-width: 800px) {
   @include headerMobile;
   .banner {
@@ -30,16 +28,72 @@
         font-size: 1.5em;
       }
     }
-    // &Quote {
-    //   &-xl {
-    //     // width: 100%;
-    //     // font-size: 3em;
-    //   }
-    // }
   }
   .enrollNow {
     .bannerQuote-xl {
       text-align: center;
+    }
+  }
+
+  @include exploreSec;
+  @include sectionCat;
+  @include articleMobile;
+
+  .footer-article {
+    font-size: 0.8em;
+  }
+  .news {
+    &-slider {
+      display: flex;
+      flex-direction: row;
+      overflow: scroll;
+      overflow-y: hidden;
+      background-color: $selectedNewsC;
+      max-width: 100%;
+    }
+    &-headline {
+      border-style: none;
+      border-right: 1px black solid;
+      // min-width: 150px;
+      min-width: 9em;
+      &-title {
+        font-size: 0.8em;
+      }
+      &-footer {
+        font-size: 0.8em;
+      }
+    }
+  }
+  .readMoreNews {
+    margin: auto 0;
+    height: inherit;
+    text-align: center;
+    font-size: 0.8em;
+    min-width: 3em;
+  }
+  .missionVision {
+    &-container {
+      width: 100%;
+      grid-template-columns: repeat(1, 100%);
+      img {
+        display: none;
+      }
+    }
+    &-box {
+      text-align: justify;
+    }
+    &-h2 {
+      text-align: center;
+    }
+  }
+  #mainfooter {
+    .mainfooter {
+      &-container {
+        width: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
     }
   }
 }
@@ -75,6 +129,62 @@
       &-sm {
         font-size: 1.5em;
       }
+    }
+  }
+  @include exploreSec;
+  @include sectionCat;
+
+  .footer-article {
+    font-size: 0.8em;
+  }
+  .news {
+    &-slider {
+      display: flex;
+      flex-direction: row;
+      overflow: scroll;
+      overflow-y: hidden;
+      background-color: $selectedNewsC;
+      max-width: 100%;
+    }
+    &-headline {
+      border-style: none;
+      border-right: 1px black solid;
+      // min-width: 150px;
+      min-width: 9em;
+      &-title {
+        font-size: 0.8em;
+      }
+      &-footer {
+        font-size: 0.8em;
+      }
+    }
+  }
+  .readMoreNews {
+    margin: auto 0;
+    height: inherit;
+    text-align: center;
+    font-size: 0.8em;
+    min-width: 3em;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-article {
+    font-size: 0.6em;
+  }
+  .missionVision {
+    &-title {
+      h1 {
+        font-size: 3em;
+      }
+    }
+    &-container {
+      width: 100%;
+      grid-template-columns: repeat(1, 100%);
+    }
+    &-box {
+      width: inherit;
+      padding: 0 20px;
     }
   }
 }

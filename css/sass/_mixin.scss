@@ -26,8 +26,6 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  max-width: 170px;
-  // margin: 3px;
 }
 @mixin articleTextOverflow {
   line-height: 1.5em;
@@ -53,6 +51,55 @@
     }
     .navBorder {
       visibility: hidden;
+    }
+  }
+}
+
+@mixin exploreSec {
+  .explore {
+    &-Option {
+      font-size: 1em;
+    }
+    &-grid {
+      grid-template-columns: repeat(2, 120px);
+    }
+  }
+}
+
+@mixin sectionCat {
+  .section {
+    &-Cat {
+      font-size: 2.5rem;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@mixin articleMobile {
+  .article {
+    &-container {
+      flex-direction: column;
+      margin: 20px;
+
+      .news-slider {
+        height: 100%;
+        // width: 50%;
+      }
+    }
+    &-content {
+      width: auto;
+    }
+    &-text {
+      h1 {
+        @include h3NewsLink;
+        font-size: 1.2em;
+      }
+      p {
+        font-size: 0.8em;
+        -webkit-line-clamp: 5;
+      }
     }
   }
 }
