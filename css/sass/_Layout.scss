@@ -75,7 +75,10 @@ header {
   }
 
   .navBorder {
+    // background-color: rgb(255, 255, 255, 0.4);
     background-color: rgb(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+
     z-index: 100;
     @include centerContent;
     gap: 20px;
@@ -141,7 +144,6 @@ header {
 
 .explore {
   margin-bottom: 50px;
-
   &-Option {
     border: 1px solid $primaryC;
     width: 100%;
@@ -176,6 +178,7 @@ header {
     }
   }
 }
+
 .section {
   &-Cat {
     font-size: 3rem;
@@ -201,6 +204,7 @@ header {
       height: 388px;
     }
   }
+
   &-content {
     background-color: white;
     // border: 1px solid black;
@@ -233,6 +237,7 @@ header {
     }
   }
 }
+
 .news {
   &-event {
     margin-bottom: 50px;
@@ -264,12 +269,14 @@ header {
       // padding: 5px;
     }
   }
+
   &-selected {
     background-color: darken($color: $selectedNewsC, $amount: 50);
     // filter: brightness(50%);
     color: white;
   }
 }
+
 .readMoreNews {
   background-color: $selectedNewsC;
   height: 40px;
@@ -304,16 +311,19 @@ header {
     // column-gap: 3em;
     row-gap: 1.5em;
   }
+
   &-box {
     width: 490px;
     height: auto;
   }
+
   &-h2 {
     color: white;
     text-shadow: $textShadow;
     font-size: 2em;
     margin-bottom: 15px;
   }
+
   &-p {
     line-height: 1.5em;
     text-shadow: $textShadow;
