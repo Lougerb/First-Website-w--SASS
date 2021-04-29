@@ -20,6 +20,8 @@ exitBtn.addEventListener("click", function () {
   toggleShow("none", "block", "-50vw", mediaQ800);
 });
 
+//ADD A FUNCTION WHEN DESKTOP MODE, NAV STYLE WILL BACK TO NORMAL
+
 // const widthChange = function (widthC) {
 //   if (widthC.matches) {
 //     hamburgerBtn.addEventListener("click", function () {
