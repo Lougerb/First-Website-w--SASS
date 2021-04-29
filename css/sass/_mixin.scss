@@ -36,7 +36,7 @@
   overflow: hidden;
 }
 
-// Mobile Queries
+// Mobile Queries=============================================
 @mixin bgBanner {
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,14 +45,70 @@
 
 @mixin headerMobile {
   header {
-    .logo-mobile {
-      display: block;
-      padding: 40px 40px;
-      width: 100%;
+    .nav {
+      &Border {
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        padding: 10px 20px;
+        .schoolLogo {
+          @include centerContent;
+          // margin-top: 20px;
+          img {
+            width: 250px;
+          }
+        }
+        .nav-wrapper {
+          // display: none;
+          background-color: rgb(255, 255, 255);
+          top: 0;
+          left: 0;
+          position: absolute;
+          height: 100vh;
+          margin-left: -50vw;
+          transition: 0.5s;
+          z-index: 100;
+          ul {
+            display: block;
+            width: 50vw;
+            height: 100px;
+            li {
+              a {
+                padding: 0 20px;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
     }
-    // .navBorder {
-    //   visibility: hidden;
-    // }
+    #nav {
+      &-hamburger {
+        font-size: 1.5em;
+        color: $primaryC;
+        z-index: 101;
+        position: absolute;
+        display: block;
+        &-wrapper {
+          display: block;
+          // @include centerContent;
+          position: absolute;
+          left: 0;
+          top: 0;
+          padding: 20px 20px;
+          &:hover {
+            cursor: pointer;
+          }
+          user-select: none;
+        }
+      }
+      &-exit {
+        position: absolute;
+        display: none;
+        font-size: 1.5em;
+        color: $primaryC;
+        z-index: 101;
+      }
+    }
   }
 }
 

@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-width: 100%;
 }
 
 li {
@@ -13,6 +15,10 @@ li {
 a {
   color: black;
   text-decoration: none;
+}
+
+body {
+  font-family: "Roboto";
 }
 
 body {
@@ -79,16 +85,8 @@ body {
   position: absolute;
 }
 
-header {
-  height: 15vh;
-}
-header .logo-mobile {
-  display: none;
-}
 header .navBorder {
   background-color: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,12 +100,12 @@ header .navBorder {
   gap: 20px;
   width: 100vw;
   height: 20vh;
-  position: fixed;
+  max-width: 100%;
 }
 header .navBorder .schoolLogo img {
   width: 500px;
 }
-header .navBorder ul {
+header .navBorder .nav-wrapper ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,10 +116,10 @@ header .navBorder ul {
   font-size: 1.2rem;
   height: inherit;
 }
-header .navBorder ul li {
+header .navBorder .nav-wrapper ul li {
   height: inherit;
 }
-header .navBorder ul li a {
+header .navBorder .nav-wrapper ul li a {
   height: inherit;
   color: #025b07;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
@@ -136,11 +134,14 @@ header .navBorder ul li a {
           align-items: center;
   width: 80px;
 }
-header .navBorder ul li a:hover {
+header .navBorder .nav-wrapper ul li a:hover {
   background-color: #be6101;
   -webkit-box-shadow: 0px 1px 2px #000;
           box-shadow: 0px 1px 2px #000;
   color: white;
+}
+header #nav-hamburger-wrapper {
+  display: none;
 }
 
 .bigButton {
@@ -549,10 +550,72 @@ header .navBorder ul li a:hover {
 }
 
 @media (max-width: 800px) {
-  header .logo-mobile {
+  header .navBorder {
+    background-color: white;
+    height: 100%;
+    padding: 10px 20px;
+  }
+  header .navBorder .schoolLogo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .navBorder .schoolLogo img {
+    width: 250px;
+  }
+  header .navBorder .nav-wrapper {
+    background-color: white;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100vh;
+    margin-left: -50vw;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 100;
+  }
+  header .navBorder .nav-wrapper ul {
     display: block;
-    padding: 40px 40px;
+    width: 50vw;
+    height: 100px;
+  }
+  header .navBorder .nav-wrapper ul li a {
+    padding: 0 20px;
     width: 100%;
+  }
+  header #nav-hamburger {
+    font-size: 1.5em;
+    color: #025b07;
+    z-index: 101;
+    position: absolute;
+    display: block;
+  }
+  header #nav-hamburger-wrapper {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px 20px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  header #nav-hamburger-wrapper:hover {
+    cursor: pointer;
+  }
+  header #nav-exit {
+    position: absolute;
+    display: none;
+    font-size: 1.5em;
+    color: #025b07;
+    z-index: 101;
   }
 
   .banner-1 .enrollNow {
@@ -684,10 +747,72 @@ header .navBorder ul li a:hover {
   }
 }
 @media (max-width: 500px) {
-  header .logo-mobile {
+  header .navBorder {
+    background-color: white;
+    height: 100%;
+    padding: 10px 20px;
+  }
+  header .navBorder .schoolLogo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .navBorder .schoolLogo img {
+    width: 250px;
+  }
+  header .navBorder .nav-wrapper {
+    background-color: white;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100vh;
+    margin-left: -50vw;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 100;
+  }
+  header .navBorder .nav-wrapper ul {
     display: block;
-    padding: 40px 40px;
+    width: 50vw;
+    height: 100px;
+  }
+  header .navBorder .nav-wrapper ul li a {
+    padding: 0 20px;
     width: 100%;
+  }
+  header #nav-hamburger {
+    font-size: 1.5em;
+    color: #025b07;
+    z-index: 101;
+    position: absolute;
+    display: block;
+  }
+  header #nav-hamburger-wrapper {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px 20px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  header #nav-hamburger-wrapper:hover {
+    cursor: pointer;
+  }
+  header #nav-exit {
+    position: absolute;
+    display: none;
+    font-size: 1.5em;
+    color: #025b07;
+    z-index: 101;
   }
 
   .banner-1 .enrollNow {

@@ -68,49 +68,50 @@ body {
   // height: 100vh;
 }
 header {
-  height: 15vh;
-
-  .logo-mobile {
-    display: none;
-  }
-
-  .navBorder {
-    // background-color: rgb(255, 255, 255, 0.4);
-    background-color: rgb(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-
-    z-index: 100;
-    @include centerContent;
-    gap: 20px;
-    width: 100vw;
-    height: 20vh;
-    position: fixed;
-
-    .schoolLogo {
-      img {
-        width: 500px;
+  .nav {
+    &Border {
+      background-color: rgb(255, 255, 255, 0.4);
+      z-index: 100;
+      @include centerContent;
+      gap: 20px;
+      width: 100vw;
+      height: 20vh;
+      max-width: 100%;
+      .schoolLogo {
+        img {
+          width: 500px;
+        }
       }
-    }
-    ul {
-      display: flex;
-      flex-direction: row;
-      // gap: 20px;
-      font-size: 1.2rem;
-      height: inherit;
-
-      li {
-        height: inherit;
-        a {
+      .nav-wrapper {
+        ul {
+          display: flex;
+          flex-direction: row;
+          // gap: 20px;
+          font-size: 1.2rem;
           height: inherit;
-          color: #025b07;
-          text-shadow: 3px 3px 4px rgb(0, 0, 0, 0.3);
-          @include centerContent;
-          width: 80px;
-          &:hover {
-            // background-color: $tertiaryC;
-            @include linkHover;
+
+          li {
+            height: inherit;
+            a {
+              height: inherit;
+              color: #025b07;
+              text-shadow: 3px 3px 4px rgb(0, 0, 0, 0.3);
+              @include centerContent;
+              width: 80px;
+              &:hover {
+                // background-color: $tertiaryC;
+                @include linkHover;
+              }
+            }
           }
         }
+      }
+    }
+  }
+  #nav {
+    &-hamburger {
+      &-wrapper {
+        display: none;
       }
     }
   }

@@ -12,7 +12,13 @@
       <div class="innerHeader">
         <header>
           <nav class="navBorder">
-            <!-- Logo -->
+            <div id="nav-hamburger-wrapper">
+              <!-- <input type="checkbox" id="nav-toggle" />
+              <label for="nav-toggle"> -->
+              <span id="nav-hamburger">&#9776;</span>
+              <span id="nav-exit">&#10005;</span>
+              <!-- </label> -->
+            </div>
             <div class="schoolLogo">
               <img
                 src="img/Spurgeon-logo.png"
@@ -20,19 +26,15 @@
                 class="logo-desktop"
               />
             </div>
-            <!-- Nav -->
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+            <div class="nav-wrapper">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
           </nav>
-          <!-- <img
-            src="img/Spurgeon-logo.png"
-            alt="Spurgeon Logo"
-            class="logo-mobile"
-          /> -->
         </header>
       </div>
 
@@ -242,5 +244,6 @@
         </span>
       </div>
     </footer>
+    <script src="./js/nav.js"></script>
   </body>
 </html>
