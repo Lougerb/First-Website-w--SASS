@@ -20,6 +20,7 @@ exitBtn.addEventListener("click", function () {
   toggleShow("none", "block", "-50vw", mediaQ800);
 });
 //xD
+//xd2
 //ADD A FUNCTION WHEN DESKTOP MODE, NAV STYLE WILL BACK TO NORMAL
 
 // const widthChange = function (widthC) {
