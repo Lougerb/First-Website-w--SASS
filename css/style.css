@@ -105,6 +105,9 @@ header .navBorder {
 header .navBorder .schoolLogo img {
   width: 500px;
 }
+header .navBorder .nav-wrapper {
+  height: 100%;
+}
 header .navBorder .nav-wrapper ul {
   display: -webkit-box;
   display: -ms-flexbox;

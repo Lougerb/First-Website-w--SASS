@@ -83,10 +83,10 @@ header {
         }
       }
       .nav-wrapper {
+        height: 100%;
         ul {
           display: flex;
           flex-direction: row;
-          // gap: 20px;
           font-size: 1.2rem;
           height: inherit;
 
