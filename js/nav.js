@@ -35,14 +35,6 @@ document.addEventListener("mouseup", function (e) {
   }
 });
 
-document.addEventListener("scroll", function (e) {
-  if (mobileNav.contains(e.target)) {
-    return null;
-  } else {
-    exitNav();
-  }
-});
-
 const desktopNav = function () {
   const currentWidth = window.innerWidth;
   if (currentWidth > 800) {
