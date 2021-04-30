@@ -47,6 +47,7 @@ const desktopNav = function () {
 window.onresize = desktopNav;
 // document.addEventListener("change", desktopNav());
 //stage new 3
+//Sample commit
 
 // const widthChange = function (widthC) {
 //   if (widthC.matches) {
