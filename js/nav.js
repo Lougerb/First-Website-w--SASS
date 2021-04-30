@@ -35,12 +35,6 @@ document.addEventListener("scroll", function (e) {
     exitNav();
   }
 });
-<<<<<<< HEAD
-//xD
-//xd2
-=======
-
->>>>>>> d5fd540374cce1d0d6a8d1f98556b851f2733bb0
 //ADD A FUNCTION WHEN DESKTOP MODE, NAV STYLE WILL BACK TO NORMAL
 const desktopNav = function () {
   const currentWidth = window.innerWidth;
@@ -52,6 +46,7 @@ const desktopNav = function () {
 };
 window.onresize = desktopNav;
 //Staged comment
+//Staged comment2
 // document.addEventListener("change", desktopNav());
 
 // const widthChange = function (widthC) {
