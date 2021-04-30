@@ -43,8 +43,6 @@ document.addEventListener("scroll", function (e) {
   }
 });
 
-// ADD A FUNCTION WHEN DESKTOP MODE, NAV STYLE WILL BACK TO NORMAL
-
 const desktopNav = function () {
   const currentWidth = window.innerWidth;
   if (currentWidth > 800) {
@@ -53,40 +51,4 @@ const desktopNav = function () {
     exitNav();
   }
 };
-// const desktopNav = function () {
-//   const currentWidth = window.innerWidth;
-//   if (currentWidth > 800) {
-//     mobileNav.style.marginLeft = "0vw";
-
-//     document.addEventListener("mouseup", function (e) {
-//       if (mobileNav.contains(e.target)) {
-//         return null;
-//       }
-//     });
-//   } else {
-//     mobileNav.style.marginLeft = "-50vw";
-
-//     hamburgerBtn.addEventListener("click", function () {
-//       toggleShow("block", "none", "0vw");
-//     });
-
-//     exitBtn.addEventListener("click", exitNav());
-
-//     document.addEventListener("mouseup", function (e) {
-//       if (mobileNav.contains(e.target)) {
-//         return null;
-//       } else {
-//         exitNav();
-//       }
-//     });
-
-//     document.addEventListener("scroll", function (e) {
-//       if (mobileNav.contains(e.target)) {
-//         return null;
-//       } else {
-//         exitNav();
-//       }
-//     });
-//   }
-// };
 window.onresize = desktopNav;
