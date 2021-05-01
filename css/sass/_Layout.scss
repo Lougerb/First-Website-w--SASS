@@ -193,9 +193,7 @@ header {
 
 .article {
   &-container {
-    @include centerContent; // width: 1400px;
-    // margin: 0px 178px;
-    // border: 1px solid black;
+    @include centerContent;
     flex-direction: row;
     // height: 490px;
     max-width: 980px;

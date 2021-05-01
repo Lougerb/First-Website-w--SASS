@@ -722,7 +722,7 @@ header #nav-hamburger-wrapper {
     height: inherit;
     text-align: center;
     font-size: 0.8em;
-    min-width: 3em;
+    min-width: 80px;
   }
 
   .missionVision-container {
@@ -893,7 +893,7 @@ header #nav-hamburger-wrapper {
     height: inherit;
     text-align: center;
     font-size: 0.8em;
-    min-width: 3em;
+    min-width: 80px;
   }
 }
 @media (max-width: 400px) {
