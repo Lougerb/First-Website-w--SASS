@@ -30,14 +30,14 @@ body {
 }
 
 .banner-1 {
-  background-image: url(./img/Spurgeon-Banner.png);
+  background-image: url("../img/Spurgeon-Banner.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
   height: 100vh;
 }
 .banner-2 {
-  background-image: url(./img/banner2.jpg);
+  background-image: url("../img/banner2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
