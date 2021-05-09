@@ -30,7 +30,7 @@ body {
 }
 
 .banner-1 {
-  background-image: url("/img/Spurgeon-Banner.png");
+  background-image: url(/img/Spurgeon-Banner.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
