@@ -12,13 +12,13 @@ body {
 
 .banner {
   &-1 {
-    background-image: url("./img/Spurgeon-Banner.png");
+    background-image: url("/img/Spurgeon-Banner.png");
 
     @include bgBanner;
     height: 100vh;
   }
   &-2 {
-    background-image: url("./img/banner2.jpg");
+    background-image: url("/img/banner2.jpg");
 
     @include bgBanner;
     height: 50vh;
